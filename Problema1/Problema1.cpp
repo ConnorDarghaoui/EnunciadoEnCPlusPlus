@@ -1,6 +1,4 @@
-/**
- * @file Problema1.cpp
- * @author Luis Boniche luisboniche@ya.ru
+ /* @author Luis Boniche luisboniche@ya.ru
  * @brief 
  * @version 0.1
  * @date 2022-05-15
@@ -16,9 +14,11 @@
 int
 main ()
 {
-  int opcion;
+  int opcion, salir;
   float dato1, dato2, resultado;
-  cout << "Calculadora C++" << endl;
+  do
+    {
+  cout << "Calculadora C++" << endl; 
   cout << "Que operacion desea hacer?" << endl;
   cout << "1. Suma" << endl;
   cout << "2. Resta" << endl;
@@ -98,26 +98,30 @@ main ()
     {
       cout << "Ingrese el dato: " << endl;
       cin >> dato1;
-      resultado = sin (dato1);
+      resultado = sin (dato1 * 3.1416 / 180);
       cout << "El seno del dato ingresado es: " << resultado << endl;
     }
   else if (opcion == 9)
     {
       cout << "Ingrese el dato: " << endl;
       cin >> dato1;
-      resultado = cos (dato1);
+      resultado = cos (dato1 * 3.1416 / 180);
       cout << "El coseno del dato ingresado es: " << resultado << endl;
     }
   else if (opcion == 10)
     {
       cout << "Ingrese el dato: " << endl;
       cin >> dato1;
-      resultado = tan (dato1);
+      resultado = tan (dato1 * 3.1416 / 180);
       cout << "La tangente del dato ingresado es: " << resultado << endl;
     }
   else
     {
       cout << "La opcion ingresada no es valida" << endl;
     }
+    cout << "Desea salir? 1. Si 2. No" << endl;
+    cin >> salir;
+    }
+  while (salir != 1);
   system ("PAUSE");
 }
